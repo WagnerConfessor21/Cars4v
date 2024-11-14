@@ -6,3 +6,7 @@ class Car(models.Model):
     year = models.IntegerField(null=False)
     filename = models.CharField(max_length=50, null=False)
 # Create your models here.
+
+    def __str__(self):
+        return self.model + ' ano: ' + str(self.year)
+
